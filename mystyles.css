@@ -4,21 +4,21 @@
 
 body {
     background-color: rgb(223, 226, 255);
-    margin: 0; /* ลบ margin ของ body */
+    margin: 0; 
 }
 
 .photo1,
 .photo2,
 .photo3 {
     cursor: pointer;
-    transition: transform 0.3s ease; /* ใช้ shorthand สำหรับ transition */
+    transition: transform 0.3s ease; 
 }
 
 .photo1 {
     display: block;
     width: 220px;
     height: 300px;
-    margin: 0 auto; /* ใช้ auto เพื่อจัดกลาง */
+    margin: 0 auto; 
 }
 
 .photo1:hover {
@@ -85,7 +85,7 @@ tr:hover {
     background-color: rgb(250, 203, 212);
 }
 
-/*------------------- Media Queries for Responsive Design -------------------*/
+/*------------------- 600 -------------------*/
 @media screen and (max-width: 600px) {
     body {
         background-color: rgb(223, 226, 255);
@@ -93,30 +93,30 @@ tr:hover {
 
     header {
         width: 100%;
-        height: auto; /* ใช้ auto เพื่อให้สูงพอสมควร */
-        font-size: 3rem; /* ใช้ rem เพื่อความยืดหยุ่น */
-        margin: 20px; /* ลด margin สำหรับหน้าจอเล็ก */
+        height: auto; 
+        font-size: 3rem; 
+        margin: 20px; 
     }
 
     h2 {
-        font-size: 2rem; /* ลดขนาดฟอนต์ */
+        font-size: 2rem; 
     }
 
     h3 {
-        font-size: 1.5rem; /* ลดขนาดฟอนต์ */
+        font-size: 1.5rem; 
     }
 
     .photo1 {
-        width: 80%; /* ทำให้กว้างขึ้นเมื่อแสดงบนมือถือ */
-        height: auto; /* ปรับสูงให้เหมาะสม */
+        width: 80%; 
+        height: auto; 
     }
 
     .photo2, .photo3 {
-        width: 80%; /* ปรับให้เหมาะสม */
-        height: auto; /* ปรับสูงให้เหมาะสม */
-        position: relative; /* เปลี่ยนเป็น relative เพื่อไม่ให้ลอย */
-        left: 0; /* ตั้งค่าให้ซ้ายสุด */
-        right: 0; /* ตั้งค่าให้ขวาสุด */
-        margin: 0 auto; /* จัดกลาง */
+        width: 80%; 
+        height: auto; 
+        position: relative; 
+        left: 0; 
+        right: 0; 
+        margin: 0 auto; 
     }
 }
