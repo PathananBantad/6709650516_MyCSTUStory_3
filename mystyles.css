@@ -1,117 +1,122 @@
-@import url('https://fonts.googleapis.com/css2?family=Mali:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+ @import url('https://fonts.googleapis.com/css2?family=Mali:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Matemasie&family=New+Amsterdam&display=swap');
 
-body{
-    background-color: rgb(223, 226, 255);}
- 
-/*-------------------600----------------------------------*/
-@media screen (max-widtth:600){
-    body{
-        background-color: rgb(223, 226, 255);}
-
-        .photo3{
-            width: 290px;
-            height: 500px;
-            padding: 0px;
-            position:flex; 
-            cursor: pointer;
-            transition-property: all;
-            transition-duration: 0.3;
-            transition-timing-function: ease;
-         }
+body {
+    background-color: rgb(223, 226, 255);
+    margin: 0; /* ลบ margin ของ body */
 }
 
-header{
-    background-image: url(resources/jellyfish\ 🪼.jpg);
-    font-family:"Lobster";
-    color: hsl(325, 100%, 91%);
-    font-size: 34pt;
-    margin: 40px;}
-
-
-h3{font-family: "mali";
-    color: rgb(82, 80, 73);
-    font-size: 24pt;
-    font-weight: normal;
-    margin: 50px }
-
-
-h2{
-    margin-top: 50px;
-    font-family: "mali";
-    color: rgb(168, 229, 255);
-    font-size: 30pt;
-    font-weight: normal;
-    margin: 50px
+.photo1,
+.photo2,
+.photo3 {
+    cursor: pointer;
+    transition: transform 0.3s ease; /* ใช้ shorthand สำหรับ transition */
 }
 
-.h{
-    text-align: center;
-    padding: 100px;}
-
-.ac{
-    text-align: center;
-    padding: 10px;}
-
-.li{
-    text-align: center;
-    padding: 10px;
-    text-decoration: none;
-    color: rgb(255, 221, 159);
+.photo1 {
+    display: block;
+    width: 220px;
+    height: 300px;
+    margin: 0 auto; /* ใช้ auto เพื่อจัดกลาง */
 }
-.photo1{
-
-        display: block;
-        width: 220px;
-        height: 300px;
-        margin-left: auto;
-        margin-right: auto;
-        cursor: pointer;
-        transition-property: all;
-        transition-duration: 0.3;
-        transition-timing-function: ease;
-
-    }
 
 .photo1:hover {
-        transform: scale(1.2);
-    }
+    transform: scale(1.2);
+}
 
-.photo2{
-        width: 350px;
-        height: 500px;
-        padding: -200px;
-        position:absolute; 
-        left: 0px;
-        cursor: pointer;
-        transition-property: all;
-        transition-duration: 0.3;
-        transition-timing-function: ease;
-     }
+.photo2 {
+    width: 350px;
+    height: 500px;
+    position: absolute; 
+    left: 0;
+}
+
 .photo2:hover {
-        transform: scale(1.2);
-    } 
+    transform: scale(1.2);
+}
 
-.photo3{
-        width: 290px;
-        height: 500px;
-        padding: 0px;
-        position:absolute; 
-        right: 0px;
-        cursor: pointer;
-        transition-property: all;
-        transition-duration: 0.3;
-        transition-timing-function: ease;
-     }
+.photo3 {
+    width: 290px;
+    height: 500px;
+    position: absolute; 
+    right: 0;
+}
+
 .photo3:hover {
-        transform: scale(1.2);
-    } 
+    transform: scale(1.2);
+}
 
-th, td{
+header {
+    background-image: url(resources/jellyfish\ 🪼.jpg);
+    font-family: "Lobster";
+    color: hsl(325, 100%, 91%);
+    font-size: 34pt;
+    margin: 40px;
+}
+
+h2, h3 {
+    font-family: "Mali";
+    color: rgb(168, 229, 255);
+    margin: 50px;
+}
+
+h2 {
+    font-size: 30pt;
+}
+
+h3 {
+    font-size: 24pt;
+    color: rgb(82, 80, 73);
+}
+
+.h, .ac, .li {
+    text-align: center;
+    padding: 10px;
+}
+
+th, td {
     padding: 15px;
     text-align: left;
     border-bottom: 15px solid hsl(319, 100%, 89%);
-  }
-  tr:hover{
+}
+
+tr:hover {
     background-color: rgb(250, 203, 212);
-  }
+}
+
+/*------------------- Media Queries for Responsive Design -------------------*/
+@media screen and (max-width: 600px) {
+    body {
+        background-color: rgb(223, 226, 255);
+    }
+
+    header {
+        width: 100%;
+        height: auto; /* ใช้ auto เพื่อให้สูงพอสมควร */
+        font-size: 3rem; /* ใช้ rem เพื่อความยืดหยุ่น */
+        margin: 20px; /* ลด margin สำหรับหน้าจอเล็ก */
+    }
+
+    h2 {
+        font-size: 2rem; /* ลดขนาดฟอนต์ */
+    }
+
+    h3 {
+        font-size: 1.5rem; /* ลดขนาดฟอนต์ */
+    }
+
+    .photo1 {
+        width: 80%; /* ทำให้กว้างขึ้นเมื่อแสดงบนมือถือ */
+        height: auto; /* ปรับสูงให้เหมาะสม */
+    }
+
+    .photo2, .photo3 {
+        width: 80%; /* ปรับให้เหมาะสม */
+        height: auto; /* ปรับสูงให้เหมาะสม */
+        position: relative; /* เปลี่ยนเป็น relative เพื่อไม่ให้ลอย */
+        left: 0; /* ตั้งค่าให้ซ้ายสุด */
+        right: 0; /* ตั้งค่าให้ขวาสุด */
+        margin: 0 auto; /* จัดกลาง */
+    }
+}
